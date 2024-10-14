@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pacman</title>
+    <script src="index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <p id="lose">
+        <span class="jersey-10-regular no-select" style="color: red; font-size: 120px">PERDISTE</span> <br>
+        <span class="jersey-10-regular no-select" style="color: yellow; font-size: 40px; animation: restartAnimation 1s steps(1) infinite">[Espacio] para jugar otra vez</span>
+    </p>
+
+    <p id="win">
+        <span class="jersey-10-regular no-select" style="font-size: 150px; animation: winAnimation 0.2s linear infinite">GANASTE</span> <br>
+    </p>
+
+<div class="game">
+    <p  class="jersey-10-regular">
+        <span class="no-select">Puntos: </span><span id="scoreEl">0</span>
+    </p>
+</div>
+
+<canvas></canvas>
+    
+</body>
+
+<style>
+
+    body, html{
+ 
+        margin: 0%;
+        padding: 0%;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    body {
+        background-image: url(/img/efectos-fondos/fondo-final.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+
+    .game {
+        position: absolute;
+        display: flex;
+        z-index: 100;
+        left: 1%;
+        top: -4%;
+    }
+
+    .game p {
+        color: white;
+        font-size: 55px;
+    }
+
+    canvas {
+        position: absolute;
+        display: flex;
+        padding: 0px;
+        top: 15%;
+        left: 15%;
+        width: 1920;
+        height: 900;
+        transform: scale(130%);
+    }
+
+    .jersey-10-regular {
+        font-family: "Jersey 10", sans-serif;
+    }
+
+    .no-select {
+        user-select: none;
+    }
+
+    #lose{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        width: 100vw;  
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        display: none;
+        
+    }
+
+    #win {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        width: 100vw;  
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        display: none;
+    }
+
+    @keyframes animateImage {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animated {
+  animation: animateImage 3s forwards;
+}
+
+    /*animaciones textos*/
+    @keyframes restartAnimation {
+        0%, 50% {
+            opacity: 1;
+        }
+
+        51%, 100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes winAnimation {
+        0% {
+            color: rgb(22, 255, 1);
+        }
+        50% {
+            color: white;
+        }
+        100% {
+            color: rgb(22, 255, 1);
+        }
+    }
+</style>
+</html>
