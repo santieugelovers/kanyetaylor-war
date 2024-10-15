@@ -23,14 +23,14 @@ function loseAnimation () {
 
 //AUDIOS
 function playWaka () {
-  const waka = new Audio ('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/waka.mp3');
+  const waka = new Audio ('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/waka.mp3?raw=true');
   waka.volume = 0.2;
   waka.play();
 }
 
-const loseAudio = new Audio('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/lose-sound.mp3')
+const loseAudio = new Audio('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/lose-sound.mp3?raw=true')
 
-const powerAudio = new Audio('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/powerup.wav')
+const powerAudio = new Audio('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/powerup.wav?raw=true')
 
 
 
@@ -39,12 +39,12 @@ const powerAudio = new Audio('https://github.com/santieugelovers/kanyetaylor-war
 //EMPEZAR PLAYLIST Y JUEGO
 
 const playlist = [
-  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/blank-space.mp3',
-  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/love-story.mp3',
-  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/paper-rings.mp3',
-  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/shake-it-off.mp3',
-  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/the-man.mp3',
-  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/you-belong-with-me.mp3'
+  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/blank-space.mp3?raw=true',
+  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/love-story.mp3?raw=true',
+  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/paper-rings.mp3?raw=true',
+  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/shake-it-off.mp3?raw=true',
+  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/the-man.mp3?raw=true',
+  'https://github.com/santieugelovers/kanyetaylor-war/blob/main/music/you-belong-with-me.mp3?raw=true'
 ];
 
 // Función para obtener un índice aleatorio
@@ -281,8 +281,8 @@ const ghosts = [
       x: Ghost.speed,
       y: 0
     },
-    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png',
-    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png'
+    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png?raw=true',
+    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png?raw=true'
   }),
   new Ghost ({
     position: {
@@ -293,8 +293,8 @@ const ghosts = [
       x: 0,
       y: Ghost.speed
     },
-    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png',
-    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png'
+    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png?raw=true',
+    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png?raw=true'
   }),
   new Ghost ({
     position: {
@@ -305,8 +305,8 @@ const ghosts = [
       x: 0,
       y: -Ghost.speed
     },
-    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png',
-    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png'
+    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png?raw=true',
+    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png?raw=true'
   }),
   new Ghost ({
     position: {
@@ -317,8 +317,8 @@ const ghosts = [
       x: 0,
       y: -Ghost.speed
     },
-    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png',
-    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png'
+    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png?raw=true',
+    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png?raw=true'
   }),
 ]
 
@@ -331,8 +331,8 @@ const player = new Player({
         x:0,
         y:0
     },
-    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/taylor.png',
-    powerImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/taylor_power.png'
+    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/taylor.png?raw=true',
+    powerImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/taylor_power.png?raw=true'
 })
 
 const keys = {
@@ -388,7 +388,7 @@ map.forEach((row, i) => {
                 x: Boundary.width * j,
                 y: Boundary.height * i
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeHorizontal.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeHorizontal.png?raw=true')
             })
           )
           break
@@ -399,7 +399,7 @@ map.forEach((row, i) => {
                 x: Boundary.width * j,
                 y: Boundary.height * i
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeVertical.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeVertical.png?raw=true')
             })
           )
           break
@@ -410,7 +410,7 @@ map.forEach((row, i) => {
                 x: Boundary.width * j,
                 y: Boundary.height * i
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCorner1.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCorner1.png?raw=true')
             })
           )
           break
@@ -421,7 +421,7 @@ map.forEach((row, i) => {
                 x: Boundary.width * j,
                 y: Boundary.height * i
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCorner2.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCorner2.png?raw=true')
             })
           )
           break
@@ -432,7 +432,7 @@ map.forEach((row, i) => {
                 x: Boundary.width * j,
                 y: Boundary.height * i
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCorner3.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCorner3.png?raw=true')
             })
           )
           break
@@ -443,7 +443,7 @@ map.forEach((row, i) => {
                 x: Boundary.width * j,
                 y: Boundary.height * i
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCorner4.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCorner4.png?raw=true')
             })
           )
           break
@@ -454,7 +454,7 @@ map.forEach((row, i) => {
                 x: Boundary.width * j,
                 y: Boundary.height * i
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/block.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/block.png?raw=true')
             })
           )
           break
@@ -465,7 +465,7 @@ map.forEach((row, i) => {
                 x: j * Boundary.width,
                 y: i * Boundary.height
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/capLeft.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/capLeft.png?raw=true')
             })
           )
           break
@@ -476,7 +476,7 @@ map.forEach((row, i) => {
                 x: j * Boundary.width,
                 y: i * Boundary.height
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/capRight.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/capRight.png?raw=true')
             })
           )
           break
@@ -487,7 +487,7 @@ map.forEach((row, i) => {
                 x: j * Boundary.width,
                 y: i * Boundary.height
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/capBottom.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/capBottom.png?raw=true')
             })
           )
           break
@@ -498,7 +498,7 @@ map.forEach((row, i) => {
                 x: j * Boundary.width,
                 y: i * Boundary.height
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/capTop.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/capTop.png?raw=true')
             })
           )
           break
@@ -509,7 +509,7 @@ map.forEach((row, i) => {
                 x: j * Boundary.width,
                 y: i * Boundary.height
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCross.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeCross.png?raw=true')
             })
           )
           break
@@ -521,7 +521,7 @@ map.forEach((row, i) => {
                 y: i * Boundary.height
               },
               color: 'blue',
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeConnectorTop.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeConnectorTop.png?raw=true')
             })
           )
           break
@@ -533,7 +533,7 @@ map.forEach((row, i) => {
                 y: i * Boundary.height
               },
               color: 'blue',
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeConnectorRight.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeConnectorRight.png?raw=true')
             })
           )
           break
@@ -545,7 +545,7 @@ map.forEach((row, i) => {
                 y: i * Boundary.height
               },
               color: 'blue',
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeConnectorBottom.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeConnectorBottom.png?raw=true')
             })
           )
           break
@@ -556,7 +556,7 @@ map.forEach((row, i) => {
                 x: j * Boundary.width,
                 y: i * Boundary.height
               },
-              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeConnectorLeft.png')
+              image: createImage('https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/boundaries/pipeConnectorLeft.png?raw=true')
             })
           )
           break
@@ -577,7 +577,7 @@ map.forEach((row, i) => {
                 x: j * Boundary.width + Boundary.width / 2,
                 y: i * Boundary.height + Boundary.height / 2
               },
-              imageSrc:'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/powerup.png'
+              imageSrc:'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/powerup.png?raw=true'
             })
           )
           break
