@@ -577,7 +577,7 @@ map.forEach((row, i) => {
                 x: j * Boundary.width + Boundary.width / 2,
                 y: i * Boundary.height + Boundary.height / 2
               },
-              imageSrc:'/img/personajes/powerup.png'
+              imageSrc:'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/powerup.png'
             })
           )
           break
