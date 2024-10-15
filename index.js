@@ -281,8 +281,8 @@ const ghosts = [
       x: Ghost.speed,
       y: 0
     },
-    imageSrc: '/img/personajes/kanye.png',
-    scaredImageSrc: '/img/personajes/kanye_scared.png'
+    imageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye.png',
+    scaredImageSrc: 'https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/personajes/kanye_scared.png'
   }),
   new Ghost ({
     position: {
