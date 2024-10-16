@@ -683,6 +683,20 @@ function animate() {
 
     }
 
+    //TECLADO CONTROLES TACTIL
+
+    document.getElementById('up').addEventListener('touchstart', () => { keys.w.pressed = true; lastKey = 'ArrowUp'; });
+    document.getElementById('up').addEventListener('touchend', () => { keys.w.pressed = false; });
+
+    document.getElementById('down').addEventListener('touchstart', () => { keys.s.pressed = true; lastKey = 'ArrowDown'; });
+    document.getElementById('down').addEventListener('touchend', () => { keys.s.pressed = false; });
+
+    document.getElementById('left').addEventListener('touchstart', () => { keys.a.pressed = true; lastKey = 'ArrowLeft'; });
+    document.getElementById('left').addEventListener('touchend', () => { keys.a.pressed = false; });
+
+    document.getElementById('right').addEventListener('touchstart', () => { keys.d.pressed = true; lastKey = 'ArrowRight'; });
+    document.getElementById('right').addEventListener('touchend', () => { keys.d.pressed = false; });
+
     
     //colision entre fantasma y jugador
     for (let i = ghosts.length - 1; 0 <= i; i--) {

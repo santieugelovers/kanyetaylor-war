@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <base href="https://santieugelovers.github.io/kanyetaylor-war/">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pacman</title>
@@ -23,13 +23,23 @@
         <span class="jersey-10-regular no-select" style="font-size: 150px; animation: winAnimation 0.2s linear infinite">GANASTE</span> <br>
     </p>
 
-<div class="game">
+<div class="game no-select">
     <p  class="jersey-10-regular">
-        <span class="no-select">Puntos: </span><span id="scoreEl">0</span>
+        <span>Puntos: </span><span id="scoreEl">0</span>
     </p>
 </div>
 
-    <canvas></canvas>
+<canvas></canvas>
+
+<div id="controls">
+    <button class="btn" id="left">←</button>
+    <div class="up-down">
+        <button class="btn" id="up">↑</button>
+        <button class="btn" id="down">↓</button>
+    </div>
+    <button class="btn" id="right">→</button>
+
+</div>
     
 </body>
 
@@ -119,6 +129,42 @@
         display: none;
     }
 
+    #controls {
+        display: none;
+    }
+
+    .btn {
+        font-size: 30px;
+        border-radius: 40%;
+        opacity: 0.8;
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn:hover {
+        opacity: 1;
+    }
+
+        .up-down {
+            display: flex;
+            flex-direction: column;
+            top: 20%;
+            left: 50%;
+            transform: translate(0, -50%);
+        }
+
+        #left {
+            top: 50%;
+            left: 20%;
+            transform: translate(0, -50%);
+        }
+
+        #right {
+            top: 50%;
+            right: 20%;
+            transform: translate(0, -50%);
+        }
+
     @keyframes animateImage {
   0% {
     transform: scale(1);
@@ -171,6 +217,13 @@
         .game p {
         color: white;
         font-size: 50px;
+    }
+
+    #controls {
+        position: absolute;
+        top: 80%;
+        display: flex;
+        z-index: 100000;
     }
 
         canvas {
