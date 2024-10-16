@@ -58,11 +58,16 @@ function getRandomIndex() {
 let currentSongIndex = getRandomIndex(); // Inicializamos con una canción aleatoria
 const gameMusic = new Audio();
 
+let musicStarted = false; // Variable de control
+
 // Iniciar la playlist después de que se presione una flecha direccional
 function startPlaylistAndGame() {
-  gameMusic.src = playlist[currentSongIndex];
-  gameMusic.play();
-  gameMusic.volume = 0.8;
+  if (!musicStarted) { // Verifica si la música ya ha comenzado
+    gameMusic.src = playlist[currentSongIndex];
+    gameMusic.play();
+    gameMusic.volume = 0.8;
+    musicStarted = true; // Marca que la música ha comenzado
+  }
 }
 
 // Definimos el listener de teclado
@@ -76,6 +81,17 @@ const keydownHandler = (event) => {
 
 // Escuchar eventos de teclado
 document.body.addEventListener('keydown', keydownHandler);
+
+// Crear manejadores de clic que inician la playlist
+const buttonClickHandler = () => {
+  startPlaylistAndGame(); // Solo llama a la función sin hacer nada adicional
+};
+
+// Asignar los manejadores de clic a los botones del teclado virtual
+document.getElementById('up').addEventListener('click', buttonClickHandler);
+document.getElementById('down').addEventListener('click', buttonClickHandler);
+document.getElementById('left').addEventListener('click', buttonClickHandler);
+document.getElementById('right').addEventListener('click', buttonClickHandler);
 
 // Cuando termina una canción, reproduce una canción aleatoria
 gameMusic.addEventListener('ended', () => {
