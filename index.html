@@ -29,7 +29,7 @@
     </p>
 </div>
 
-<canvas></canvas>
+    <canvas></canvas>
     
 </body>
 
@@ -37,19 +37,23 @@
 
     body, html{
  
-        margin: 0%;
-        padding: 0%;
+        margin: 0;
+        padding: 0;
         height: 100%;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: black;
-        overflow: hidden;
+        overflow: hidden;  
     }
 
     body {
-        background-image: url(/img/efectos-fondos/fondo-final.png);
+        background-image: url(https://github.com/santieugelovers/kanyetaylor-war/blob/main/img/efectos-fondos/fondo-final.png?raw=true);
         background-repeat: no-repeat;
         background-position: right;
         background-size: contain;
+        overflow: hidden;
     }
 
     .game {
@@ -62,18 +66,16 @@
 
     .game p {
         color: white;
-        font-size: 55px;
+        font-size: 22px;
     }
 
     canvas {
-        position: absolute;
-        display: flex;
+        overflow: hidden;
+        display: block;
         padding: 0px;
-        top: 15%;
-        left: 15%;
+        margin: 0px;
         width: 1920;
         height: 900;
-        transform: scale(130%);
     }
 
     .jersey-10-regular {
@@ -154,5 +156,33 @@
             color: rgb(22, 255, 1);
         }
     }
+
+    /*RESPONSIVE*/
+
+    @media(max-width: 1250px) {
+    }
+
+    @media(max-width: 412px) {
+        body {
+            overflow: hidden;
+            background-image: none;
+        }
+
+        .game p {
+        color: white;
+        font-size: 50px;
+    }
+
+        canvas {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            transform: scale(1.5);
+            transform-origin: center left;
+            
+        }
+    }
+
 </style>
 </html>
