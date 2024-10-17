@@ -5,8 +5,13 @@ canvas.height = 900; // Resolución interna del canvas (alto)
 const c = canvas.getContext('2d')
 console.log(canvas)
 
+document.getElementById('lose-reset-button').addEventListener('click', function() {
+  location.reload(); // Recargar la página
+});
+const virtualKeyboard = document.getElementById('controls')
 const scoreEl = document.querySelector('#scoreEl')
-const loseText = document.getElementById('lose')
+const loseText = document.getElementById('lose-pc')
+const loseTextCel = document.getElementById('lose-cel')
 const winText = document.getElementById('win')
 
 //ANIMACION AL INICIAR
@@ -17,11 +22,18 @@ const winText = document.getElementById('win')
 //ANIMACION PERDER
 
 function loseAnimation () {
-  loseText.style.display = 'flex'
+  
+  virtualKeyboard.style.display = 'none'
   gameMusic.pause()
   loseAudio.play()
   loseAudio.volume = 0.5;
   cancelAnimationFrame(animationId)
+  const screenWidth = window.innerWidth;
+  if (screenWidth === 412) {
+    loseTextCel.style.display = 'flex'
+  } else {
+    loseText.style.display = 'flex'
+  }
 }
 
 //AUDIOS
@@ -74,7 +86,6 @@ function startPlaylistAndGame() {
 const keydownHandler = (event) => {
   if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
       startPlaylistAndGame();
-      // Eliminamos el listener para que no se ejecute nuevamente
       document.body.removeEventListener('keydown', keydownHandler);
   }
 };
@@ -82,18 +93,16 @@ const keydownHandler = (event) => {
 // Escuchar eventos de teclado
 document.body.addEventListener('keydown', keydownHandler);
 
-// Crear manejadores de clic que inician la playlist
 const buttonClickHandler = () => {
-  startPlaylistAndGame(); // Solo llama a la función sin hacer nada adicional
+  startPlaylistAndGame(); 
 };
 
-// Asignar los manejadores de clic a los botones del teclado virtual
+
 document.getElementById('up').addEventListener('click', buttonClickHandler);
 document.getElementById('down').addEventListener('click', buttonClickHandler);
 document.getElementById('left').addEventListener('click', buttonClickHandler);
 document.getElementById('right').addEventListener('click', buttonClickHandler);
 
-// Cuando termina una canción, reproduce una canción aleatoria
 gameMusic.addEventListener('ended', () => {
   let nextSongIndex;
 
@@ -738,6 +747,7 @@ function animate() {
                   location.reload();
               }
             });
+
             //console.log('perdiste')
             }
           }
@@ -747,6 +757,7 @@ function animate() {
 
     if (pellets.length === 0) {
       winText.style.display = 'flex'
+      virtualKeyboard.style.display = 'none'
       cancelAnimationFrame(animationId)
     }
 

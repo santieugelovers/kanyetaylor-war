@@ -14,13 +14,18 @@
 </head>
 <body>
 
-    <p id="lose">
+    <p id="lose-pc">
         <span class="jersey-10-regular no-select" style="color: red; font-size: 120px">PERDISTE</span> <br>
         <span class="jersey-10-regular no-select" style="color: yellow; font-size: 40px; animation: restartAnimation 1s steps(1) infinite">[Espacio] para jugar otra vez</span>
     </p>
 
+    <p id="lose-cel">
+        <span class="jersey-10-regular no-select" style="color: red; font-size: 120px">PERDISTE</span> <br>
+        <button id="lose-reset-button" class="jersey-10-regular no-select" style="color: yellow; font-size: 40px; animation: restartAnimation 1s steps(1) infinite">[Toca] para jugar otra vez</button>
+    </p>
+
     <p id="win">
-        <span class="jersey-10-regular no-select" style="font-size: 150px; animation: winAnimation 0.2s linear infinite">GANASTE</span> <br>
+        <span class="jersey-10-regular no-select" style=" animation: winAnimation 0.2s linear infinite">GANASTE</span> <br>
     </p>
 
 <div class="game no-select">
@@ -96,8 +101,7 @@
         user-select: none;
     }
 
-    #lose{
-        display: flex;
+    #lose-pc{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -109,17 +113,36 @@
         z-index: 1000;
         background-color: rgba(0, 0, 0, 0.5);
         text-align: center;
-        display: none;
-        
+        display: none; 
+    }
+
+    #lose-cel{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 95vh; 
+        width: 100vw;  
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        display: none; 
+    }
+
+    #lose-cel button {
+        background: none;
+        border: none;
     }
 
     #win {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh; 
-        width: 100vw;  
+        width: 100vw;
+        font-size: 150px;
         position: fixed;
         top: 0;
         left: 0;
@@ -227,7 +250,7 @@
         z-index: 100000;
     }
 
-        canvas {
+    canvas {
             position: relative;
             margin: 0;
             padding: 0;
@@ -236,6 +259,10 @@
             transform-origin: center left;
             
         }
+
+    #win {
+        font-size: 100px;
+    }
     }
 
 </style>
