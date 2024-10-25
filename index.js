@@ -45,7 +45,7 @@ function playWaka () {
   waka.play();
 }
 
-const comerAudio = new Audio('')
+const comerAudio = new Audio('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/comer.mp3?raw=true')
 
 const loseAudio = new Audio('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/lose-sound.mp3?raw=true')
 
@@ -747,6 +747,7 @@ function animate() {
             if (ghost.scared) {
               ghosts.splice(i, 1)
               score += 200
+              comerAudio.play()
             } else {
 
               loseAnimation()
@@ -844,8 +845,6 @@ function animate() {
 
     ghosts.forEach(ghost => {
       ghost.update()
-    
-
 
       const collisions = []
     
