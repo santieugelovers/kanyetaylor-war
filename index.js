@@ -14,6 +14,8 @@ const loseText = document.getElementById('lose-pc')
 const loseTextCel = document.getElementById('lose-cel')
 const winText = document.getElementById('win')
 
+
+
 //ANIMACION AL INICIAR
 
 
@@ -42,6 +44,8 @@ function playWaka () {
   waka.volume = 0.2;
   waka.play();
 }
+
+const comerAudio = new Audio('')
 
 const loseAudio = new Audio('https://github.com/santieugelovers/kanyetaylor-war/blob/main/sounds/lose-sound.mp3?raw=true')
 
@@ -147,8 +151,11 @@ class Player{
 
         this.image = new Image()
         this.image.src = imageSrc
+
         this.originalImageSrc = imageSrc
-        this.powerImageSrc = powerImageSrc
+
+        this.powerImage = new Image()
+        this.powerImage.src = powerImageSrc
   
         this.image.onload = () => {
             this.width = this.image.width
@@ -178,7 +185,7 @@ class Player{
         this.position.y += this.velocity.y
 
         if (this.powerState) {
-          this.image.src = this.powerImageSrc
+          this.image.src = this.powerImage.src
         } else {
           this.image.src = this.originalImageSrc
         }
@@ -204,14 +211,16 @@ class Ghost{
       this.scared = false
       
       this.image = new Image()
-      this.image.src = imageSrc
-      this.originalImageSrc = imageSrc
-      this.scaredImageSrc = scaredImageSrc
+      this.image.src = imageSrc;
+
+      this.originalImageSrc = imageSrc;
+
+      this.scaredImage = new Image();
+      this.scaredImage.src = scaredImageSrc
 
       this.image.onload = () => {
       this.width = this.image.width
       this.height = this.image.height
-
       this.recentDirections = [];
 
       }
@@ -228,7 +237,7 @@ class Ghost{
       c.closePath()
 
       if (this.scared) {
-        this.image.src = this.scaredImageSrc
+        this.image.src = this.scaredImage.src
       } else {
         this.image.src = this.originalImageSrc
       }
@@ -297,6 +306,7 @@ const powerUps = []
 const pellets = []
 
 const boundaries = []
+
 
 const ghosts = [
   new Ghost ({
