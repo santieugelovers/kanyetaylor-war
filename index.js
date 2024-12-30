@@ -31,7 +31,7 @@ function loseAnimation () {
   loseAudio.volume = 0.5;
   cancelAnimationFrame(animationId)
   const screenWidth = window.innerWidth;
-  if (screenWidth === 412) {
+  if (screenWidth === 414) {
     loseTextCel.style.display = 'flex'
   } else {
     loseText.style.display = 'flex'
